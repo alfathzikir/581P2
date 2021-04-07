@@ -1,0 +1,81 @@
+html, body {
+    height: 90%;
+    position: relative;
+    margin: auto;
+}
+
+h1 {
+	font-family: 'Alegreya' ;
+}
+.content {
+    justify-content: center;
+    margin: auto;
+  }
+
+.callButton{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
+}
+
+.body {
+    background-color:#fac7ff;
+    overflow: hidden;
+    height: 90%;
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+input {
+	font-size: 18px;
+	text-align: center;
+}
+
+
+#generate {
+	background-color: #09f;
+}
+
+#copy {
+	background-color: #0c6;
+}
+
+
+.bubble{
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: lightblue;
+    animation: bounce .5s cubic-bezier(.5, -.9, .6, 1.9) forwards;
+    transform: translate(-50%, -50%);
+    transition:
+        width .3s cubic-bezier(.7, -.6, .4, 1.5),
+        height .3s cubic-bezier(.7, -.6, .4, 1.5),
+        opacity .3s ease-out;
+}
+
+.is-popping{
+    height: 0;
+    width: 0;
+    opacity: 0;
+    animation-name: none;
+}
+
+
+@keyframes bounce {
+    0% {
+        height: 50px;
+        width: 50px;
+    }
+    100% {
+        height: 100px;
+        width: 100px;
+    }
+}
